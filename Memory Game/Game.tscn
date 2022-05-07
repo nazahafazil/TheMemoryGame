@@ -1,0 +1,611 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Game.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 70
+extra_spacing_char = 1
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 55
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 12
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 245
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=9]
+size = 25
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=10]
+size = 40
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=11]
+size = 100
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=12]
+size = 26
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=14]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=15]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=16]
+size = 20
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=17]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=18]
+size = 14
+extra_spacing_char = 28
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=19]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=20]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=21]
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=22]
+size = 32
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=23]
+size = 33
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=24]
+size = 33
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=25]
+size = 22
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=26]
+size = 22
+font_data = ExtResource( 1 )
+
+[node name="GameUI" type="Control"]
+margin_right = 1000.0
+margin_bottom = 600.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = 42.0
+margin_top = 28.0
+margin_right = 190.0
+margin_bottom = 77.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "MODE:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentMode" type="Label" parent="TitleLabel"]
+margin_left = 159.0
+margin_top = -1.0
+margin_right = 429.0
+margin_bottom = 51.0
+custom_fonts/font = SubResource( 1 )
+text = "In Order"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnswerTextBox" type="TextEdit" parent="."]
+margin_left = 40.0
+margin_top = 100.0
+margin_right = 940.0
+margin_bottom = 203.0
+custom_fonts/font = SubResource( 2 )
+readonly = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PointsLabel" type="Label" parent="AnswerTextBox"]
+margin_left = 824.0
+margin_top = 5.0
+margin_right = 892.0
+margin_bottom = 27.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "POINTS:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentPoints" type="Label" parent="AnswerTextBox"]
+margin_left = 771.0
+margin_top = 12.0
+margin_right = 943.0
+margin_bottom = 85.0
+custom_fonts/font = SubResource( 4 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "0"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResetPoints" type="Button" parent="AnswerTextBox"]
+margin_left = 831.243
+margin_top = 72.1265
+margin_right = 882.243
+margin_bottom = 94.1265
+custom_fonts/font = SubResource( 5 )
+text = "Reset"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisplayWindow" type="ColorRect" parent="."]
+margin_left = 690.0
+margin_top = 245.0
+margin_right = 935.0
+margin_bottom = 545.0
+color = Color( 0.172549, 0.164706, 0.196078, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartingMessageLabel" type="Label" parent="DisplayWindow"]
+visible = false
+margin_top = 31.0
+margin_right = 245.0
+margin_bottom = 188.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.372549, 0.34902, 0.34902, 1 )
+text = "Numbers
+will
+appear
+HERE!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DisplayNumberLabel" type="Label" parent="DisplayWindow"]
+visible = false
+margin_right = 245.0
+margin_bottom = 300.0
+custom_fonts/font = SubResource( 7 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReadySetGo" type="Label" parent="DisplayWindow"]
+visible = false
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -74.5
+margin_top = -119.0
+margin_right = 74.5
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 8 )
+custom_colors/font_color = Color( 0.662745, 0.866667, 0.580392, 1 )
+text = "Ready,
+Set,
+Go!"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimeMessageLabel" type="Label" parent="DisplayWindow"]
+visible = false
+margin_right = 244.0
+margin_bottom = 199.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0.854902, 0.313726, 0.313726, 1 )
+text = "Enter the
+numbers
+before the
+time runs out!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelLabel" type="Label" parent="DisplayWindow"]
+visible = false
+margin_top = 23.5755
+margin_right = 245.0
+margin_bottom = 83.5755
+custom_fonts/font = SubResource( 10 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Level"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentLevelLabel" type="Label" parent="DisplayWindow/LevelLabel"]
+visible = false
+margin_top = 45.5049
+margin_right = 245.0
+margin_bottom = 165.505
+custom_fonts/font = SubResource( 11 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StartSubmitButton" type="Button" parent="."]
+modulate = Color( 0.478431, 0.890196, 0.513726, 1 )
+margin_left = 725.0
+margin_top = 453.0
+margin_right = 902.0
+margin_bottom = 509.0
+custom_fonts/font = SubResource( 12 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "Start Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DigitLabel" type="Label" parent="."]
+margin_left = 66.0
+margin_top = 246.0
+margin_right = 637.0
+margin_bottom = 283.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Number of Digits:     "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NumberOfDigits" type="Label" parent="DigitLabel"]
+margin_left = 407.006
+margin_top = -3.0
+margin_right = 447.006
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 14 )
+text = "4"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModeSelectorLabel" type="Label" parent="."]
+visible = false
+margin_left = 72.5218
+margin_top = 251.0
+margin_right = 203.522
+margin_bottom = 328.0
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "SELECT
+MODES:"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InOrderCheckBox" type="CheckBox" parent="ModeSelectorLabel"]
+margin_left = 156.0
+margin_top = 3.0
+margin_right = 267.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 16 )
+text = "In Order"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReverseCheckBox" type="CheckBox" parent="ModeSelectorLabel"]
+margin_left = 156.0
+margin_top = 38.0
+margin_right = 272.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 16 )
+text = "Reverse"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AscendingCheckBox" type="CheckBox" parent="ModeSelectorLabel"]
+margin_left = 287.0
+margin_top = 3.0
+margin_right = 425.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 16 )
+text = "Ascending"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescendingCheckBox" type="CheckBox" parent="ModeSelectorLabel"]
+margin_left = 287.0
+margin_top = 38.0
+margin_right = 425.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 16 )
+text = "Descending"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PositionalCheckBox" type="CheckBox" parent="ModeSelectorLabel"]
+margin_left = 447.0
+margin_top = 3.0
+margin_right = 598.0
+margin_bottom = 36.0
+custom_fonts/font = SubResource( 16 )
+text = "Positional"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AllModesCheckBox" type="CheckBox" parent="ModeSelectorLabel"]
+margin_left = 447.0
+margin_top = 38.0
+margin_right = 558.0
+margin_bottom = 71.0
+custom_fonts/font = SubResource( 16 )
+text = "All Modes"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RandomizeCheckBox" type="CheckBox" parent="."]
+margin_left = 521.295
+margin_top = 325.217
+margin_right = 639.295
+margin_bottom = 355.217
+custom_fonts/font = SubResource( 17 )
+text = "Randomize"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DigitSlider" type="HSlider" parent="."]
+modulate = Color( 1, 1, 0.027451, 1 )
+self_modulate = Color( 1, 1, 0.027451, 1 )
+margin_left = 61.7043
+margin_top = 296.646
+margin_right = 641.704
+margin_bottom = 312.646
+min_value = 1.0
+max_value = 9.0
+value = 4.0
+scrollable = false
+tick_count = 9
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DigitNumbers" type="Label" parent="DigitSlider"]
+margin_left = 0.295715
+margin_top = 9.35376
+margin_right = 578.296
+margin_bottom = 38.3538
+custom_fonts/font = SubResource( 18 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "1 2 3 4 5 6 7 8 9"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedLabel" type="Label" parent="."]
+margin_left = 215.855
+margin_top = 364.309
+margin_right = 494.855
+margin_bottom = 401.309
+custom_fonts/font = SubResource( 19 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
+text = "Speed:            "
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CurrentSpeed" type="Label" parent="SpeedLabel"]
+margin_left = 139.091
+margin_right = 279.091
+margin_bottom = 37.0
+custom_fonts/font = SubResource( 20 )
+text = "Normal"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SpeedSlider" type="HSlider" parent="."]
+modulate = Color( 1, 1, 0.027451, 1 )
+self_modulate = Color( 1, 1, 0.027451, 1 )
+margin_left = 61.0
+margin_top = 400.0
+margin_right = 643.0
+margin_bottom = 451.0
+min_value = 1.0
+max_value = 3.0
+value = 2.0
+tick_count = 3
+ticks_on_borders = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Speeds" type="Label" parent="SpeedSlider"]
+margin_left = -25.0
+margin_top = 32.0
+margin_right = 608.0
+margin_bottom = 52.0
+custom_fonts/font = SubResource( 21 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Slow                                               Normal                                               Fast"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TimerLabel" type="Label" parent="."]
+margin_left = 725.392
+margin_top = 40.1131
+margin_right = 817.392
+margin_bottom = 79.1131
+custom_fonts/font = SubResource( 22 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Time:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tens" type="TextEdit" parent="TimerLabel"]
+margin_left = 106.0
+margin_top = -5.0
+margin_right = 152.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 23 )
+custom_colors/selection_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Ones" type="TextEdit" parent="TimerLabel"]
+margin_left = 154.0
+margin_top = -5.0
+margin_right = 200.0
+margin_bottom = 42.0
+custom_fonts/font = SubResource( 24 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackToStartButton" type="Button" parent="."]
+margin_left = 70.0
+margin_top = 495.0
+margin_right = 243.0
+margin_bottom = 545.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Back to Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ModeSelectButton" type="Button" parent="."]
+margin_left = 255.0
+margin_top = 495.0
+margin_right = 455.0
+margin_bottom = 545.0
+custom_fonts/font = SubResource( 26 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Mode Selection"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HowToPlayButton" type="Button" parent="."]
+margin_left = 465.0
+margin_top = 495.0
+margin_right = 638.0
+margin_bottom = 545.0
+custom_fonts/font = SubResource( 25 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "How to Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NumberClock" type="Timer" parent="."]
+
+[node name="CountdownTimer" type="Timer" parent="."]
+wait_time = 0.7
+
+[node name="AnswerTimer" type="Timer" parent="."]
+wait_time = 0.5
+
+[node name="PuzzleCountdownTimer" type="Timer" parent="."]
+wait_time = 3.0
+
+[connection signal="pressed" from="AnswerTextBox/ResetPoints" to="." method="_on_ResetPoints_pressed"]
+[connection signal="pressed" from="StartSubmitButton" to="." method="_on_StartSubmitButton_pressed"]
+[connection signal="toggled" from="ModeSelectorLabel/InOrderCheckBox" to="." method="_on_InOrderCheckBox_toggled"]
+[connection signal="toggled" from="ModeSelectorLabel/ReverseCheckBox" to="." method="_on_ReverseCheckBox_toggled"]
+[connection signal="toggled" from="ModeSelectorLabel/AscendingCheckBox" to="." method="_on_AscendingCheckBox_toggled"]
+[connection signal="toggled" from="ModeSelectorLabel/DescendingCheckBox" to="." method="_on_DescendingCheckBox_toggled"]
+[connection signal="toggled" from="ModeSelectorLabel/PositionalCheckBox" to="." method="_on_PositionalCheckBox_toggled"]
+[connection signal="toggled" from="ModeSelectorLabel/AllModesCheckBox" to="." method="_on_AllModesCheckBox_toggled"]
+[connection signal="toggled" from="RandomizeCheckBox" to="." method="_on_RandomizeCheckBox_toggled"]
+[connection signal="value_changed" from="DigitSlider" to="." method="_on_DigitSlider_value_changed"]
+[connection signal="value_changed" from="SpeedSlider" to="." method="_on_SpeedSlider_value_changed"]
+[connection signal="text_changed" from="TimerLabel/Tens" to="." method="_on_Tens_text_changed"]
+[connection signal="text_changed" from="TimerLabel/Ones" to="." method="_on_Ones_text_changed"]
+[connection signal="pressed" from="BackToStartButton" to="." method="_on_BackToStartButton_pressed"]
+[connection signal="pressed" from="ModeSelectButton" to="." method="_on_ModeSelectButton_pressed"]
+[connection signal="pressed" from="HowToPlayButton" to="." method="_on_HowToPlayButton_pressed"]
+[connection signal="timeout" from="NumberClock" to="." method="_on_NumberClock_timeout"]
+[connection signal="timeout" from="CountdownTimer" to="." method="_on_CountdownTimer_timeout"]
+[connection signal="timeout" from="AnswerTimer" to="." method="_on_AnswerTimer_timeout"]
+[connection signal="timeout" from="PuzzleCountdownTimer" to="." method="_on_PuzzleCountdownTimer_timeout"]

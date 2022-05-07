@@ -1,0 +1,127 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://fonts/Xolonium-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://ModeSelect.gd" type="Script" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 30
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 20
+font_data = ExtResource( 1 )
+
+[node name="ModeSelectUI" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectLabel" type="Label" parent="."]
+margin_top = 155.0
+margin_right = 1000.0
+margin_bottom = 230.0
+custom_fonts/font = SubResource( 1 )
+text = "Select a Mode:"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InOrderButton" type="Button" parent="."]
+margin_left = 160.0
+margin_top = 258.0
+margin_right = 370.0
+margin_bottom = 321.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "In Order"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReverseButton" type="Button" parent="."]
+margin_left = 160.0
+margin_top = 338.0
+margin_right = 370.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Reverse"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AscendingButton" type="Button" parent="."]
+margin_left = 390.0
+margin_top = 258.0
+margin_right = 600.0
+margin_bottom = 321.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Ascending"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescendingButton" type="Button" parent="."]
+margin_left = 390.0
+margin_top = 338.0
+margin_right = 600.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Descending"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PositionalButton" type="Button" parent="."]
+margin_left = 620.0
+margin_top = 258.0
+margin_right = 830.0
+margin_bottom = 321.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Positional"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelledButton" type="Button" parent="."]
+margin_left = 620.0
+margin_top = 338.0
+margin_right = 830.0
+margin_bottom = 401.0
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Levelled"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BackButton" type="Button" parent="."]
+margin_left = 12.0
+margin_top = 13.0
+margin_right = 163.0
+margin_bottom = 45.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 0.74902, 0.74902, 0.658824, 1 )
+text = "Back to Start"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="pressed" from="InOrderButton" to="." method="_on_InOrderButton_pressed"]
+[connection signal="pressed" from="ReverseButton" to="." method="_on_ReverseButton_pressed"]
+[connection signal="pressed" from="AscendingButton" to="." method="_on_AscendingButton_pressed"]
+[connection signal="pressed" from="DescendingButton" to="." method="_on_DescendingButton_pressed"]
+[connection signal="pressed" from="PositionalButton" to="." method="_on_PositionalButton_pressed"]
+[connection signal="pressed" from="LevelledButton" to="." method="_on_LevelledButton_pressed"]
+[connection signal="pressed" from="BackButton" to="." method="_on_BackButton_pressed"]
